@@ -22,12 +22,24 @@
 extern "C" {
 #endif
 
+/**
+ * Initialise integration studio runtime from caller-provided values so later operations
+ * receive a known state.
+ */
 UmiStatus umi_integration_studio_runtime_init(
     UmiApplicationWorkspaceRuntime *out_runtime);
+/**
+ * Provide the integration studio runtime health operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_integration_studio_runtime_health(
     UmiApplicationCapabilityProbe probe,
     void *user_data,
     UmiApplicationRuntimeHealth *out_health);
+/**
+ * Provide the integration studio runtime experience operation used by this module and its
+ * client applications.
+ */
 const UmiApplicationExperienceDefinition *umi_integration_studio_runtime_experience(void);
 
 #ifdef __cplusplus

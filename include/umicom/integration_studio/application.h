@@ -25,11 +25,23 @@ extern "C" {
 
 #define UMI_INTEGRATION_STUDIO_MODULE_API_VERSION 1U
 
+/**
+ * Provide the integration studio application id operation used by this module and its
+ * client applications.
+ */
 const char *umi_integration_studio_application_id(void);
 
+/**
+ * Provide the integration studio application experience operation used by this module and
+ * its client applications.
+ */
 const UmiApplicationExperienceDefinition *
 umi_integration_studio_application_experience(void);
 
+/**
+ * Provide the integration studio application status operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_integration_studio_application_status(
     UmiApplicationExperienceStatus *out_status);
 
