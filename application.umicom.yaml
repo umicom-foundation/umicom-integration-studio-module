@@ -6,6 +6,8 @@ application:
   short_name: Integration Studio
   version: 0.1.0
   executable: umicom-integration-studio-console
+  native_executable: umicom-integration-studio
+  console_executable: umicom-integration-studio-console
   aliases: [integration-studio]
 
 framework:
@@ -14,6 +16,8 @@ framework:
 
 frontends:
   - console
+  # Shared Framework GTK layout preview; domain services require controllers.
+  - gtk
 
 entry:
   kind: workbench
